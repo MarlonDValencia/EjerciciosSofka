@@ -25,7 +25,7 @@ public class Menu {
             case 1,2,3,4,5,6,7 -> MostrarMenu();
             case 8 -> System.exit(0);
             default -> {
-                System.out.println("Ingresa una opción válida");
+                System.out.println("Opción incorrecta");
                 MostrarMenu();}
         }
         }
