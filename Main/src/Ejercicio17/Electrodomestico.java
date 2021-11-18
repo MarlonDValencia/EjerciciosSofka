@@ -1,10 +1,10 @@
 package Ejercicio17;
 import java.util.*;
 public class Electrodomestico {
-    private double precioBase = 100.0;
-    private String color = "blanco";
-    private char consumoEnergetico = 'F';
-    private double peso = 5.0;
+    protected double precioBase = 100.0;
+    protected String color = "blanco";
+    protected char consumoEnergetico = 'F';
+    protected double peso = 5.0;
 
     public Electrodomestico() {
     }
@@ -56,7 +56,8 @@ public class Electrodomestico {
             }
         }
     }
-    public void precioFinal(){
+    public double precioFinal(){
+
         HashMap <Character, Double> precioConsumo = new HashMap <Character, Double> ();
         precioConsumo.put('A', 100.0);
         precioConsumo.put('B', 80.0);
@@ -74,5 +75,6 @@ public class Electrodomestico {
         }else if((this.peso >= 80.0)){
             this.precioBase += 100.0;
         }
+        return precioBase;
     }
 }
